@@ -1,0 +1,10 @@
+
+{
+  "baseUrl" : "https://www.instahyre.com/",
+    "Email": "Your email@gmail.com",
+    "password": "Your password",
+    "resumePath":"your path to resume",
+    "ImagePath": "path to your image"
+
+}
+
