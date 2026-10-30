@@ -41,13 +41,13 @@ project-root/
 ├── POM/
 │   ├── BasePage.js
 │   ├── InstahyreLoginPage.js
-│   └── Profile.js
+│   |── Profile.js
 ├── testData/
-│   └── data.json
+│   |── data.json
 ├── tests/
-│   └── instahyre-Login.spec.js
+   |── instahyre-Login.spec.js
 ├── playwright.config.js
-└── README.md
+|── README.md
 Keep filenames and imports consistent. The test imports
 ../POM/InstahyreLoginPage, so the page-object file should be named
 InstahyreLoginPage.js. The base-page file should be named
