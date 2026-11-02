@@ -1,6 +1,8 @@
 const path = require('node:path')
+const fs = require('node:fs')
 const { expect } = require('@playwright/test')
 const BasePage = require('./BasePage')
+const robot = require('robotjs');
 
 class Profile extends BasePage {
     constructor(page){
@@ -21,6 +23,30 @@ class Profile extends BasePage {
         this.profileImageUpdateButton = this.profileImageSection.getByRole('link', { name: /Update/ })
         this.profileImageFileInput = this.profileImageSection.locator('#image-input')
     }
+    async selectFileThroughWindowsDialog(filePath) {
+
+    if (!fs.existsSync(filePath)) {
+        throw new Error(`File not found: ${filePath}`);
+    }
+
+    const absolutePath = path.resolve(filePath);
+
+    // Allow Windows file dialog to become active
+    await this.page.waitForTimeout(1000);
+
+    // Focus the File name field
+    robot.keyTap('n', ['control']);
+
+    await this.page.waitForTimeout(500);
+
+    // Enter the complete file path
+    robot.typeString(absolutePath);
+
+    // Confirm file selection
+    robot.keyTap('enter');
+
+    await this.page.waitForTimeout(1500);
+}
 
     getSection(heading) {
         return this.page.getByRole('heading', { name: heading, exact: true }).locator('..')
