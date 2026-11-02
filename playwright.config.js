@@ -34,6 +34,7 @@ module.exports = defineConfig({
     trace: 'on-first-retry',
     screenshot:'on',
     video:'on',
+
   
   
     

@@ -12,7 +12,7 @@ export default class BaseAPI {
             baseURL: this.baseURL,
             extraHTTPHeaders: {
                 'Content-Type': 'application/json',
-                 'x-api-key': 'free_user_3DC7eayigrz9CCIVfQfmN2L9VjO'
+                 'x-api-key': 'Your api key'
             }
         });
     }

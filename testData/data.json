@@ -1,22 +1,9 @@
 
-
 {
-  "baseUrl" : "https://demoqa.com/",
-    "username": "Amit8310",
-    "password": "Amit@2001",
-    "bookName": "Learning JavaScript Design Patterns",
+  "baseUrl" : "https://www.instahyre.com/",
+    "Email": "Your email@gmail.com",
+    "password": "Your password",
+    "resumePath":"Your resume path",
+    "ImagePath": "Your image path"
 
-  "api": {
-    "createUser": {
-      "name": "Amit",
-      "job": "QA Intern"
-    },
-    "updateUser": {
-      "name": "Amit Updated",
-      "job": "Senior QA"
-    },
-    "getUserId": 2,
-    "updateUserId": 2
-  }
 }
-
